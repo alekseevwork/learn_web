@@ -1,0 +1,1 @@
+export FLASK_APP=webapp && FLASK_DEBUG=true && FLASK_ENV=development && flask run

@@ -7,11 +7,3 @@ keys.py
 .env 
 *.db
 .vscode
-
-add_user.py
-db.py
-delete_user.py
-get_user.py
-models.py
-python.org.html
-update_user.py
