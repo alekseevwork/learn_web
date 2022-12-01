@@ -13,6 +13,7 @@ from webapp.news.parsers.utils import get_html, save_news
 # else:
 #     locale.setlocale(locale.LC_TIME, 'ru_RU')
 
+
 def parse_habr_date(date_str):
     if 'сегодня' in date_str:
         today = datetime.now()
@@ -25,6 +26,7 @@ def parse_habr_date(date_str):
     except ValueError:
         return datetime.now()
 
+
 def get_news_snippets():
     html = get_html("https://habr.com/ru/search/?target_type=posts&q=python&order")
     if html:
@@ -36,6 +38,7 @@ def get_news_snippets():
             published = news.find('time')['datetime'][:-5]
             published = parse_habr_date(published)
             save_news(title, url, published)
+
 
 def get_news_content():
     news_without_text = News.query.filter(News.text.is_(None))

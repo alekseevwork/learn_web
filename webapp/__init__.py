@@ -9,6 +9,7 @@ from webapp.admin.views import blueprint as admin_blueprin
 from webapp.news.views import blueprint as news_blueprint
 from webapp.user.views import blueprint as user_blueprint
 
+
 def create_app():
     app = Flask(__name__)
     app.config.from_pyfile('config.py')
